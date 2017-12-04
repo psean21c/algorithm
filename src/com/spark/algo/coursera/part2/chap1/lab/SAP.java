@@ -1,4 +1,4 @@
-package com.spark.algo.coursera.part2.chap1.work;
+package com.spark.algo.coursera.part2.chap1.lab;
 
 import java.util.LinkedList;
 import java.util.Queue;

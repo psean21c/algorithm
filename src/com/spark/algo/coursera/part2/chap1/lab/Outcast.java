@@ -1,4 +1,4 @@
-package com.spark.algo.coursera.part2.chap1.work;
+package com.spark.algo.coursera.part2.chap1.lab;
 
 import edu.princeton.cs.algs4.In;
 import edu.princeton.cs.algs4.StdOut;
