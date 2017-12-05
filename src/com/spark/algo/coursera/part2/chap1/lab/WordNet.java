@@ -3,7 +3,9 @@ package com.spark.algo.coursera.part2.chap1.lab;
 public class WordNet {
 
 	   // constructor takes the name of the two input files
-	   public WordNet(String synsets, String hypernyms){}
+	   public WordNet(String synsets, String hypernyms){
+		   
+	   }
 
 	   // returns all WordNet nouns
 	   public Iterable<String> nouns(){
