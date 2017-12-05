@@ -29,5 +29,10 @@ public class WordNet {
 	   }
 
 	   // do unit testing of this class
-	   public static void main(String[] args){}
+	   public static void main(String[] args){
+		   String file1 = args[0];
+		   String file2 = args[1];
+		   System.out.println(file1 + "\t" + file2);
+		   
+	   }
 	}
