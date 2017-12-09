@@ -5,7 +5,7 @@ import java.util.Queue;
 
 import edu.princeton.cs.algs4.Digraph;
 import edu.princeton.cs.algs4.In;
-//import edu.princeton.cs.algs4.StdIn;
+import edu.princeton.cs.algs4.StdIn;
 import edu.princeton.cs.algs4.StdOut;
 
 public class SAP {
@@ -36,8 +36,27 @@ public class SAP {
 	// do unit testing of this class
 	public static void main(String[] args) {
 		try {
-			// To do
+			String txt = args[0];
+			System.out.println("Text file:" + txt);
+			In in = new In(txt);
+			Digraph G = new Digraph(in);
+			for(int v =0; v<G.V(); v++){
+				for(int w: G.adj(v)) StdOut.println(v + "->" + w);
+			}
+			
+			SAP sap = new SAP(G);
+//			sap.checkBooleanValue();
+//			sap.findAncestor(7);
+			sap.ancestor(3, 11);
+			while (!StdIn.isEmpty()) {
+				int v = StdIn.readInt();
+				int w = StdIn.readInt();
+				int length = sap.length(v, w);
+				int ancestor = sap.ancestor(v, w);
+				StdOut.printf("length = %d, ancestor = %d\n", length, ancestor);
+			}
 		} catch (IllegalArgumentException e) {
+
 		}
 
 	}

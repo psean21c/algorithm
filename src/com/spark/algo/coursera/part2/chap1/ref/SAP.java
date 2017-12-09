@@ -5,6 +5,7 @@ import java.util.Queue;
 
 import edu.princeton.cs.algs4.Digraph;
 import edu.princeton.cs.algs4.In;
+import edu.princeton.cs.algs4.StdIn;
 //import edu.princeton.cs.algs4.StdIn;
 import edu.princeton.cs.algs4.StdOut;
 
@@ -115,14 +116,14 @@ public class SAP {
 			SAP sap = new SAP(G);
 //			sap.checkBooleanValue();
 			sap.findAncestor(7);
-//			sap.ancestor(3, 11);
-//			while (!StdIn.isEmpty()) {
-//				int v = StdIn.readInt();
-//				int w = StdIn.readInt();
-//				int length = sap.length(v, w);
-//				int ancestor = sap.ancestor(v, w);
-//				StdOut.printf("length = %d, ancestor = %d\n", length, ancestor);
-//			}
+			sap.ancestor(3, 11);
+			while (!StdIn.isEmpty()) {
+				int v = StdIn.readInt();
+				int w = StdIn.readInt();
+				int length = sap.length(v, w);
+				int ancestor = sap.ancestor(v, w);
+				StdOut.printf("length = %d, ancestor = %d\n", length, ancestor);
+			}
 		} catch (IllegalArgumentException e) {
 
 		}

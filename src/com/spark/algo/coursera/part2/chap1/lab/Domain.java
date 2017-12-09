@@ -36,15 +36,6 @@ public class Domain implements Comparable<Domain> {
         return this.n - that.n;
     }
 
-
-//	@Override
-//	public int compareTo(Domain o) {
-//		// TODO Auto-generated method stub
-//		return 0;
-//	}
-
-
-
     // test client
     public static void main(String[] args) {
 
