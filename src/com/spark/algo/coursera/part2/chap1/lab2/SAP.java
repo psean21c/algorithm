@@ -1,4 +1,4 @@
-package com.spark.algo.coursera.part2.chap1.tmp;
+package com.spark.algo.coursera.part2.chap1.lab2;
 
 
 import edu.princeton.cs.algs4.Digraph;

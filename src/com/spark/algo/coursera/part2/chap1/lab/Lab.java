@@ -13,6 +13,8 @@ public class Lab {
 		graph.addEdge(5, 6);
 		graph.addEdge(10, 9);
 		
+		graph.E();
+		
 		Iterable<Integer> g1 = graph.adj(0);
 		Iterable<Integer> g2 = graph.adj(2);
 		System.out.println(g1.toString());

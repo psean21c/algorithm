@@ -9,8 +9,13 @@ import edu.princeton.cs.algs4.StdIn;
 import edu.princeton.cs.algs4.StdOut;
 
 public class SAP {
+	private Digraph graph;
+	private boolean marked[];
+	
 	// constructor takes a digraph (not necessarily a DAG)
 	public SAP(Digraph G) {
+		this.graph = G;
+		marked = new boolean[G.E()];
 	}
 
 	// length of shortest ancestral path between v and w; -1 if no such path
@@ -45,8 +50,6 @@ public class SAP {
 			}
 			
 			SAP sap = new SAP(G);
-//			sap.checkBooleanValue();
-//			sap.findAncestor(7);
 			sap.ancestor(3, 11);
 			while (!StdIn.isEmpty()) {
 				int v = StdIn.readInt();
