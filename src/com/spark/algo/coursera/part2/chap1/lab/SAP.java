@@ -3,7 +3,9 @@ package com.spark.algo.coursera.part2.chap1.lab;
 import java.util.LinkedList;
 import java.util.Queue;
 
+import edu.princeton.cs.algs4.BreadthFirstPaths;
 import edu.princeton.cs.algs4.Digraph;
+import edu.princeton.cs.algs4.DirectedDFS;
 import edu.princeton.cs.algs4.In;
 import edu.princeton.cs.algs4.StdIn;
 import edu.princeton.cs.algs4.StdOut;
@@ -11,20 +13,32 @@ import edu.princeton.cs.algs4.StdOut;
 public class SAP {
 	private Digraph graph;
 	private boolean marked[];
+//	private DirectedDFS dfs;
 	
 	// constructor takes a digraph (not necessarily a DAG)
 	public SAP(Digraph G) {
 		this.graph = G;
-		marked = new boolean[G.E()];
+		marked = new boolean[G.V()];
 	}
 
 	// length of shortest ancestral path between v and w; -1 if no such path
 	public int length(int v, int w) {
+		validateVertex(v);
+		validateVertex(w);
+//		DirectedDFS dfs1 = new DirectedDFS(graph,v);
+//		DirectedDFS dfs2 = new DirectedDFS(graph,w);
+		BreadthFirstPaths bfs1 = new BreadthFirstPaths(graph,v);
+//		BreadthFirstPaths bfs2 = new BreadthFirstPaths(graph,w);
+		System.out.println(bfs1.toString());
+//		System.out.println(bfs2);
+		
 		return 0;
 	}
 
 	// a common ancestor of v and w that participates in a shortest ancestral path; -1 if no such path
 	public int ancestor(int v, int w) {
+		validateVertex(v);
+		validateVertex(w);
 		return 0;
 	}
 
@@ -38,6 +52,14 @@ public class SAP {
 		return 0;
 	}
 
+	// validate vertex if it is in the group
+    private void validateVertex(int v) {
+        int V = marked.length;
+        if (v < 0 || v >= V)
+            throw new IllegalArgumentException("vertex " + v + " is not between 0 and " + (V-1));
+    }
+
+    
 	// do unit testing of this class
 	public static void main(String[] args) {
 		try {
@@ -50,6 +72,8 @@ public class SAP {
 			}
 			
 			SAP sap = new SAP(G);
+			sap.length(3, 11);
+			
 			sap.ancestor(3, 11);
 			while (!StdIn.isEmpty()) {
 				int v = StdIn.readInt();
