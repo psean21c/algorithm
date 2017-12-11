@@ -35,9 +35,9 @@ public class SAP {
 		int len = graph.V();
 		for(int i=0;i<len;i++){
 			// 
+			System.out.println(vBFS.hasPathTo(i) + ":" + vBFS.distTo(i) + "," + wBFS.hasPathTo(i) + ":" + wBFS.distTo(i));
 			if(vBFS.hasPathTo(i) && wBFS.hasPathTo(i)){
-				System.out.println(vBFS.pathTo(i) + "," + wBFS.pathTo(i));
-				
+//				System.out.println(vBFS.pathTo(i) + "," + wBFS.pathTo(i));
 			}
 		}
 		
@@ -90,8 +90,7 @@ public class SAP {
 			}
 			
 			SAP sap = new SAP(G);
-			sap.length(3, 11);
-			
+//			sap.length(3, 11);
 			sap.ancestor(3, 11);
 			while (!StdIn.isEmpty()) {
 				int v = StdIn.readInt();
